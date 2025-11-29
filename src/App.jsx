@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-// Single Todo Item
+
 const TodoItem = ({ task, toggleComplete, deleteTask }) => {
   return (
     <li className={`item ${task.completed ? 'done' : ''}`}>
@@ -15,7 +15,7 @@ const TodoItem = ({ task, toggleComplete, deleteTask }) => {
   );
 };
 
-// List of all todos
+
 const TodoList = ({ tasks, toggleComplete, deleteTask }) => {
   const sortedTasks = [...tasks].sort((a, b) => (a.completed ? 1 : -1));
 
@@ -37,7 +37,7 @@ const TodoList = ({ tasks, toggleComplete, deleteTask }) => {
   );
 };
 
-// Input form
+
 const TodoForm = ({ addTask }) => {
   const [inputValue, setInputValue] = useState('');
 
@@ -65,7 +65,7 @@ const TodoForm = ({ addTask }) => {
   );
 };
 
-// Parent App
+
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
